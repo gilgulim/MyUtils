@@ -3,7 +3,7 @@
  */
 public class ExceptionUtils {
 
-    public static String printStackTrace(StackTraceElement[] stackTrace) {
+    public static String getprintableStackTrace(StackTraceElement[] stackTrace) {
         String result = "";
         for (StackTraceElement element : stackTrace) {
             result+="\n\t"+element.toString();
