@@ -2,6 +2,11 @@
  * Created by Gil Peretz on 06/03/2016.
  */
 public class StringHelper {
+    public static String convertStreamToString(java.io.InputStream is) {
+        java.util.Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
+        return s.hasNext() ? s.next() : "";
+    }
+
     public static boolean areEqual(String str1, String str2) {
         if (str1 == null) {
             return str2 == null;
